@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message User {
+    int32 Id = 1;           // id
+    string UserName = 2;     
+    string UserPassword  = 3; 
+    string Remarks = 4;
+    bool Flag = 5;
+}
+
+service TestUser {
+    rpc GetAll(User) returns (User) {}
+    rpc GetUser(User) returns (User) {}
+}
